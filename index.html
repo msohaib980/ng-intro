@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ng-intro</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js" charset="utf-8"></script>
+  <script src="main.js"></script>
+</head>
+<body ng-app="myApp" ng-controller = "mainCtrl" >
+
+
+    <h1>ngIntro</h1>
+
+    <div>
+      name :{{name}}
+      <!-- $scope.name -->
+    </div>
+  <div>
+      count :{{count}}
+  </div>
+  <div>
+    <button ng-click="addTOCount()">+</button>
+  </div>;
+  <div><input type="text" ng-model = "user"></div>
+  <div>
+    <button ng-click="addName()">Add Name</button>
+  </div>
+  <div>
+    <ul>
+      <li  ng-repeat="name in names track by $index">{{name}}</li>
+    </ul>
+  </div>
+
+</body>
+</html>
